@@ -34,16 +34,22 @@ document.getElementById('personalityForm').addEventListener('submit', function(e
     const description = personalities[randomPersonalityKey];
 
     const resultDiv = document.getElementById('result');
-    resultDiv.style.display = 'block';
     resultDiv.innerHTML = `
-        <h2>Your Definitely Not Random Personality</h2>
         <p><strong>Personality:</strong> ${randomPersonalityKey}</p>
         <p><strong>Description:</strong> ${description}</p>
         <h3>Your Details</h3>
         <p><strong>Date of Birth:</strong> ${dob}</p>
         <p><strong>Country of Birth:</strong> ${country}</p>
         <p><strong>Eye Color:</strong> ${eye_color}</p>
-        <p><strong>T-Shirt Size:</strong> ${tshirt_size}</p>
+        <p><strong>T-shirt Size:</strong> ${tshirt_size}</p>
         <p><strong>Age at First Period:</strong> ${age_period}</p>
     `;
+
+    document.getElementById('formPage').style.display = 'none';
+    document.getElementById('resultPage').style.display = 'block';
 });
+
+function goBack() {
+    document.getElementById('resultPage').style.display = 'none';
+    document.getElementById('formPage').style.display = 'block';
+}
