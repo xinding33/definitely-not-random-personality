@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Personality App</h1>
+    <form id="personalityForm">
+        <label for="dob">Enter your date of birth:</label><br>
+        <input type="date" id="dob" name="dob"><br>
+        <label for="country">Enter your country of birth:</label><br>
+        <select id="country" name="country">
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">China</option>
+            <option value="Other">Other</option>
+        </select><br>
+        <label for="eye_color">Enter your eye color:</label><br>
+        <select id="eye_color" name="eye_color">
+            <option value="Brown">Brown</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Other">Other</option>
+        </select><br>
+        <label for="tshirt_size">Enter your t-shirt size:</label><br>
+        <select id="tshirt_size" name="tshirt_size">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="X-Large">X-Large</option>
+            <option value="Other">Other</option>
+        </select><br>
+        <label for="age_period">Enter your age at first period (if applicable):</label><br>
+        <select id="age_period" name="age_period">
+            <option value="N/A">N/A</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="result" class="result" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
